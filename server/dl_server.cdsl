@@ -1,0 +1,11 @@
+import "DLServer.idsl";
+
+Component dl_server
+{
+    Communications
+    {
+        implements DLServer;
+    };
+	language python;
+};
+

@@ -1,0 +1,18 @@
+module RoboCompDLServer
+{
+  sequence<byte> ImgType;
+  sequence<float> ProbScores;
+  
+  struct TImage
+  {
+    int width;
+    int height;
+    int depth;
+    ImgType image;
+  };
+
+  interface DLServer
+  {
+    idempotent ProbScores processImage(TImage img);
+  };
+};
